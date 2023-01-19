@@ -2,18 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: sans-serif;
 }
 body{
     max-width: 1280px;
     margin: auto;
+    background-color: gray;
+}
+section{
+    margin: 5px 0px;
+    background-color: white;
+   
 }
 div{
     padding: 5px;
 }
 h1{
-    margin:  5px auto;
+  
+
     text-align: center;
-    border: 1px solid gray;
+ 
 }
 ul{
     padding-left: 20px;
@@ -28,6 +37,26 @@ pre{
     color: red;
     font-weight: 300;
 }
-h2{
+h3{
     color: blue;
+
+}
+h2, h3, p, ul{
+    margin: 0px 30px;
+}
+.horasPersonal{
+    display: grid;
+    grid-template-columns:1fr 1fr 3fr;
+    margin: 10px 0;
+    background-color: blanchedalmond;
+
+}
+.hormigon{
+    background-color: gray;
+ 
+    margin: 10px auto;
+  
+    color: white;
+    letter-spacing: 2px;
+    font-family: sans-serif;
 }
