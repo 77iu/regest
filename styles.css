@@ -34,8 +34,13 @@ pre{
    
 }
 .rojo{
-    color: red;
+    
     font-weight: 300;
+    animation: redd 0.5s linear alternate infinite;
+}
+@keyframes redd{
+    from{color: red;}
+    to{color: transparent}
 }
 h3{
     color: rgb(6, 6, 177);
