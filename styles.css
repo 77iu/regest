@@ -10,8 +10,59 @@ body{
     margin: auto;
     background-color: gray;
 }
+.organizar{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display:flex ;
+    align-items: center;
+    gap: 4px;
+   overflow: hidden;
+}
+.dias{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(128, 89, 89);
+    display:flex ;
+    gap: 4px;
+    overflow: scroll;
+}
+.mes{
+    background-color: red;
+    height: 40px;
+    
+}
+.mes ul{
+    display: flex;
+    flex-direction: column;
+}
+.mes ul li{
+    text-decoration: none;
+    height: 40px;
+}
+.izquierda{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+}
+.derecha{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+}
+.organizar a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    /* border-radius: 50%; */
+    border: 1px solid white;
+}
 section{
-    margin: 5px 0px;
+   
+    margin: 10px 0px;
     background-color: white;
    
 }
@@ -20,7 +71,7 @@ div{
 }
 h1{
   
-
+    padding-top: 40px;
     text-align: center;
  
 }
@@ -34,18 +85,15 @@ pre{
    
 }
 .rojo{
-    
+    color: red;
     font-weight: 300;
-    animation: redd 0.5s linear alternate infinite;
+    
 }
-@keyframes redd{
-    from{color: red;}
-    to{color: transparent}
-}
+
 h3{
-    color: rgb(6, 6, 177);
+    
    font-size: 15px;
-   border-bottom:1px solid rgb(6, 6, 177);
+   
    display: inline;
    line-height: 2px;
    
@@ -58,25 +106,19 @@ h2, h3, p, ul{
     display: grid;
     grid-template-columns:1fr 1fr 3fr;
  
-    background-color: hsl(34, 78%, 95%);
+    background-color: white;
 
 }
-.hormigon{
-    background-color: gray;
- 
-    /* margin: 10px auto; */
-  
-  color: azure;
+.fondoGris{
+    background-color: rgb(238, 229, 229);
+    padding: 20px 5px;
     letter-spacing: 2px;
     font-family: sans-serif;
 }
 .subcontratos{
-    background-color: hsl(74, 78%, 95%);
-    
+    background-color:white;
+    padding: 20px 5px;
     letter-spacing: 2px;
 }
 
-.observaciones{
-   padding: 20px 0;
-   background-color: hsl(94, 78%, 95%);
-}
+
