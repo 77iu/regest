@@ -5,6 +5,7 @@
     letter-spacing: 1px;
     font-family: sans-serif;
 }
+html{scroll-behavior: smooth;}
 body{
     max-width: 1280px;
     margin: auto;
@@ -13,7 +14,7 @@ body{
 }
 .organizar{
     width: 100%;
-    height: 40px;
+    height: 60px;
     background-color: black;
     position: sticky;
     top: 0;
@@ -21,12 +22,26 @@ body{
     display:flex ;
     align-items: center;
     gap: 4px;
-   overflow: hidden;
+   /* overflow: hidden; */
+
 }
+.gradient01{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid white;
+    border-radius: 25px;
+   position: relative;
+   background-color: #805959;
+
+}
+
 .dias{
     width: 100%;
     height: 40px;
-    background-color: rgb(128, 89, 89);
+    background-color: #805959;
     display:flex ;
     gap: 4px;
     overflow: scroll;
@@ -55,14 +70,18 @@ height: 100%;
     to{transform: rotateX(0deg);}
 }
 .izquierda{
-    height: 100%;
+    height: 50%;
     aspect-ratio: 1/1;
     background-color: white;
+    clip-path: polygon(0%50%,60%0%,60%25%,100%25%,100%75%,60%75%,60%100%);
+   
 }
 .derecha{
-    height: 100%;
+    height: 50%;
     aspect-ratio: 1/1;
     background-color: white;
+    clip-path: polygon(0%25%,40%25%,40%0%,100%50%,40%100%,40%75%,0%75%);
+    
 }
 .organizar a{
     color: white;
@@ -71,18 +90,22 @@ height: 100%;
     /* border-radius: 50%; */
     border: 1px solid white;
 }
+
 section{
    
     margin: 10px 0px;
     background-color: white;
    
 }
+section:last-of-type{
+    margin-bottom: 0px;
+}
 div{
     padding: 5px;
 }
 h1{
   
-    padding-top: 40px;
+    padding-top: 65px;
     text-align: center;
  
 }
@@ -132,4 +155,73 @@ h2, h3, p, ul{
     letter-spacing: 2px;
 }
 
+
+.cssToolTip {
+    position: relative; /* Esta clase tiene que tener posicion relativa */
+    border: 1px solid #ff8c00;
+    border-radius: 25px;
+    color: #ff8c00; /* Color del texto */
+    display: flex;
+    z-index: 100;
+   animation: mes 1s linear alternate infinite;
+    
+}
+@keyframes mes{
+    from{ border: 2px solid #ff8c00;}
+    to{ border: 2px solid yellow;}
+}
+
+/* El tooltip */
+
+.cssToolTip span {
+    background: rgba(20,20,20,0.9) url('img/info.gif') center left 5px no-repeat; 
+    border: 2px solid #87cefa;
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 5px #333; */
+    filter: drop-shadow(0 0 0.2rem black);
+    color: #87cefa;
+    /* display: none;  */
+    /* El tooltip por defecto estara oculto */
+   opacity: 0;
+    font-size: 0.8em;
+    padding: 10px 10px 10px 10px;
+    max-width: 6000px;
+    position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
+
+    top: 35px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+
+    left: 5px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+
+    z-index: 100; /* Poner un z-index alto para que aparezca por encima del resto de elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+
+}
+
+
+/* El tooltip cuando se muestra */
+
+.cssToolTip:hover span {
+    /* display: block; */
+     /* Para mostrarlo simplemente usamos display block por ejemplo */
+     animation: mostrar 0.3s linear forwards;
+
+}
+@keyframes mostrar{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+span button{
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+  border: transparent;
+}
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+}
 
