@@ -100,6 +100,13 @@ section{
 section:last-of-type{
     margin-bottom: 0px;
 }
+section:first-of-type{
+    margin-top: 0px;
+}
+#seccionesEnero{
+    margin: 0;
+    padding: 0;
+}
 div{
     padding: 5px;
 }
@@ -120,8 +127,15 @@ pre{
 }
 .rojo{
     color: red;
-    font-weight: 300;
-    
+    font-weight: 300;  
+}
+.azul{
+    color: mediumblue;
+    font-weight: 300;  
+}
+.verde{
+    color: green;
+    font-weight: 300;  
 }
 
 h3{
@@ -158,18 +172,16 @@ h2, h3, p, ul{
 
 .cssToolTip {
     position: relative; /* Esta clase tiene que tener posicion relativa */
-    border: 1px solid #ff8c00;
+    border: 2px solid white;
+font-size: 25px;
     border-radius: 25px;
-    color: #ff8c00; /* Color del texto */
+    color: white;
     display: flex;
     z-index: 100;
-   animation: mes 1s linear alternate infinite;
+  
     
 }
-@keyframes mes{
-    from{ border: 2px solid #ff8c00;}
-    to{ border: 2px solid yellow;}
-}
+
 
 /* El tooltip */
 
@@ -181,14 +193,15 @@ h2, h3, p, ul{
     filter: drop-shadow(0 0 0.2rem black);
     color: #87cefa;
     /* display: none;  */
+    transform: scale(0);
     /* El tooltip por defecto estara oculto */
-   opacity: 0;
+   /* opacity: 0; */
     font-size: 0.8em;
     padding: 10px 10px 10px 10px;
     max-width: 6000px;
     position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
 
-    top: 35px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+    top: 45px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
 
     left: 5px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
 
@@ -196,7 +209,7 @@ h2, h3, p, ul{
     display: flex;
     flex-direction: column;
     gap: 2px;
-
+   
 
 }
 
@@ -205,19 +218,22 @@ h2, h3, p, ul{
 
 .cssToolTip:hover span {
     /* display: block; */
+    animation: mostrar 0.3s linear forwards;
      /* Para mostrarlo simplemente usamos display block por ejemplo */
-     animation: mostrar 0.3s linear forwards;
+    
 
 }
 @keyframes mostrar{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+  0%{transform: scale(0);}
+  80%{transform: scale(1.2);}
+  100%{transform: scale(1);}
 }
 span button{
     font-size: 20px;
     background-color: transparent;
     color: white;
   border: transparent;
+ 
 }
 footer{
     width: 100%;
