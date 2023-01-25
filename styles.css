@@ -31,7 +31,7 @@ body{
     display: flex;
     align-items: center;
     gap: 4px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 25px;
    position: relative;
    background-color: #805959;
@@ -83,11 +83,12 @@ height: 100%;
     clip-path: polygon(0%25%,40%25%,40%0%,100%50%,40%100%,40%75%,0%75%);
     
 }
-.organizar a{
+.dias a{
     color: white;
     text-decoration: none;
     font-size: 25px;
-    /* border-radius: 50%; */
+    padding: 0 10px;
+    border-radius: 32px;
     border: 1px solid white;
 }
 
@@ -173,7 +174,7 @@ h2, h3, p, ul{
 .cssToolTip {
     position: relative; /* Esta clase tiene que tener posicion relativa */
     border: 2px solid white;
-font-size: 25px;
+font-size: 32px;
     border-radius: 25px;
     color: white;
     display: flex;
@@ -201,7 +202,7 @@ font-size: 25px;
     max-width: 6000px;
     position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
 
-    top: 45px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+    top: 55px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
 
     left: 5px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
 
