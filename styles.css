@@ -175,29 +175,36 @@ h2, h3, p, ul{
 .cssToolTip {
     position: relative; /* Esta clase tiene que tener posicion relativa */
     border: 2px solid white;
-font-size: 32px;
+    font-size: 32px;
     border-radius: 25px;
     color: white;
     display: flex;
-    z-index: 100;
-  
-    
+    z-index: 100;  
+}
+.cssToolTipD {
+    position: relative; /* Esta clase tiene que tener posicion relativa */
+    border: 2px solid white;
+    font-size: 32px;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    z-index: 100;  
 }
 
 
 /* El tooltip */
 
 .cssToolTip span {
-    background: rgba(20,20,20,0.9) url('img/info.gif') center left 5px no-repeat; 
+   background-color: #222;
     border: 2px solid #87cefa;
     border-radius: 5px;
-    /* box-shadow: 5px 5px 5px #333; */
+    
     filter: drop-shadow(0 0 0.2rem black);
     color: #87cefa;
-    /* display: none;  */
+   
     transform: scale(0);
-    /* El tooltip por defecto estara oculto */
-   /* opacity: 0; */
+   
+  
     font-size: 0.8em;
     padding: 10px 10px 10px 10px;
     max-width: 6000px;
@@ -214,11 +221,46 @@ font-size: 32px;
    
 
 }
+.cssToolTipD span {
+  background-color: #222;
+    border: 2px solid #87cefa;
+    border-radius: 5px;
+    
+    filter: drop-shadow(0 0 0.2rem black);
+    color: #87cefa;
+ 
+    transform: scale(0);
+   
+  
+    font-size: 0.8em;
+    padding: 10px 10px 10px 10px;
+    max-width: 6000px;
+    position: absolute; /* El tooltip se posiciona de forma absoluta para no modificar el aspezto del resto de la pagina */
+
+    top: 50px; /* Posicion apartir de la parte superior del primer elemento padre con posicion relativa */
+
+    left: 5px; /* Posicion apartir de la parte izquierda del primer elemento padre con posicion relativa */
+
+    z-index: 100; /* Poner un z-index alto para que aparezca por encima del resto de elementos */
+    display: flex;
+    flex-direction: row;
+  
+    gap: 2px;
+   
+
+}
 
 
 /* El tooltip cuando se muestra */
 
 .cssToolTip:hover span {
+    /* display: block; */
+    animation: mostrar 0.3s linear forwards;
+     /* Para mostrarlo simplemente usamos display block por ejemplo */
+    
+
+}
+.cssToolTipD:hover span {
     /* display: block; */
     animation: mostrar 0.3s linear forwards;
      /* Para mostrarlo simplemente usamos display block por ejemplo */
@@ -252,4 +294,59 @@ footer{
     height: 30px;
     background-color: black;
 }
+.menu{
+    width: 80px;
+    height: 35px;
+    background-color: red;
+    position: relative;
+    border-radius: 20px;
+}
+.menu span{
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+top: 37px;
+left: 0px;
+
+
+}
+.mesess{
+    position: relative;
+    background-color: #87cefa;
+    border-radius: 20px;
+    margin-bottom: 2px;
+}
+.mesess span{
+    position: absolute;
+top: 0;
+left: 82px;
+text-align: center;
+
+}
+.mesess span div{
+    width: 80px;
+    height: 35px;
+    background-color: #87cefa;
+    margin-bottom: 2px;
+    border-radius: 20px;
+}
+.diass{
+    position: relative;
+    background-color: #87cefa;
+    border-radius: 20px;
+}
+.diass span{
+    position: absolute;
+top: 0;
+left: 82px;
+text-align: center;
+
+}
+
+
+
+
+
 
