@@ -357,3 +357,32 @@ footer{
     height: 30px;
     background-color: black;
 }
+.hormigon{
+    background-color: rgba(128, 128, 128, 0.61);
+    cursor: pointer;
+}
+.hormigon span{
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    transform: scale(0);
+    background-color: rgb(80, 180, 177);
+    border: 0.5px solid black;
+    filter: drop-shadow(0 0 0.2rem black);
+    color: white;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+    font-size: 15px;
+ 
+}
+
+.hormigon:hover span{
+animation: Hormigon 0.3s ease-in-out forwards;
+}
+@keyframes Hormigon{
+    0%{transform: scale(0);}
+    80%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
