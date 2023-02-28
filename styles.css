@@ -22,6 +22,7 @@ body{
     display:flex ;
     align-items: center;
     gap: 4px;
+    z-index: 5;
   
 
 }
@@ -35,13 +36,13 @@ body{
 } */
 .dias{
     width: 210px;
-   height: 170px;
+   height: 210px;
    
     gap: 2px;
     justify-content: space-around;
     display: grid;
     grid-template-columns: repeat(7, 30px);
-    grid-template-rows: repeat(5, 30px);
+    grid-template-rows: repeat(6, 30px);
 }
 .dias div{
     width: 100%;
@@ -69,6 +70,9 @@ body{
     text-align: center;
     /* border: 1px solid white; */
     background-color: #87cefa;
+}
+.dias .HHHoras{
+    width: 150px;
 }
 
 .opacidad{
@@ -103,6 +107,9 @@ body{
 .loro27{animation: loro 0.3s 1.30s ease-in-out forwards;}
 .loro28{animation: loro 0.3s 1.35s ease-in-out forwards;}
 .loro29{animation: loro 0.3s 1.40s ease-in-out forwards;}
+.loro30{animation: loro 0.3s 1.45s ease-in-out forwards;}
+.loro31{animation: loro 0.3s 1.50s ease-in-out forwards;}
+.loro32{animation: loro 0.3s 1.55s ease-in-out forwards;}
 @keyframes loro{
     0%{opacity: 0;
     filter: brightness(1);}
@@ -124,6 +131,7 @@ section{
     background-color: white;
    
 }
+
 section:last-of-type{
     margin-bottom: 0px;
 }
@@ -278,6 +286,70 @@ span button:hover{
 span button a{
     text-decoration: none;
     color: white;
+}
+
+
+.horario{
+    width: 100%;
+    height: auto;
+display: grid;
+grid-template-columns: auto auto;
+padding-top: 80px;
+
+  
+
+}
+.apellidos{
+  
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 10px;
+    z-index: 2;
+   
+}
+.apellidos div{
+    width: 100%;
+    height: 30px;
+  border: 1px solid black;
+    background-color: #87cefa;
+}
+.sonLosDias div{
+    background-color: #87cefa;
+}
+.horas{
+    width: 100%;
+    height: auto;
+  
+    overflow: scroll;
+   
+   
+   
+}
+.HHHoras{
+    width: 100px;
+}
+.horasPP{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(26,30px);
+    /* margin: -10px; */
+   
+    
+}
+.horasPPP{
+    display: grid;
+    grid-template-columns: repeat(28,30px);
+ 
+    
+}
+.horasPPP div{
+    border: 1px solid black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+   
+    
 }
 
 footer{
