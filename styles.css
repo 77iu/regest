@@ -23,8 +23,10 @@ body{
     align-items: center;
     gap: 4px;
     z-index: 5;
-  
-
+}
+.accidente{
+    color: red;
+    font-size: 12px;
 }
 
 /* .dias{
@@ -43,6 +45,7 @@ body{
     display: grid;
     grid-template-columns: repeat(7, 30px);
     grid-template-rows: repeat(6, 30px);
+
 }
 .dias div{
     width: 100%;
@@ -348,6 +351,8 @@ padding-top: 80px;
     display: grid;
     align-items: center;
     justify-content: center;
+    width: 30px;
+    height: 30px;
    
     
 }
